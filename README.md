@@ -27,7 +27,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 ## Video Walkthrough
 
-Walkthroughs of implemented user stories are attached as separate .mov files in this repo.
+Walkthroughs of implemented user stories are attached as separate files in this repo.
 
 ## Notes
 
