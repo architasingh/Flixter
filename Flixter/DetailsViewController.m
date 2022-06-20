@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *movieDescrFull;
 @property (weak, nonatomic) IBOutlet UILabel *rating;
 @property (weak, nonatomic) IBOutlet UILabel *relDat;
+@property (weak, nonatomic) IBOutlet UIImageView *movieImageWide;
 
 @end
 
@@ -51,6 +52,7 @@
     
     // Download and set the image using URL
     [self.movieImage setImageWithURL:url];
+    [self.movieImageWide setImageWithURL:url];
 }
 
 @end

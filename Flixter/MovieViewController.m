@@ -21,11 +21,13 @@
 // Gets info from API into created properties
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // Start the activity indicator
     [self.activityIndicatorMovie startAnimating];
     
     [self fetchMovies];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     // Refreshes view’s contents
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -33,7 +35,7 @@
     [self.tableView insertSubview:refreshControl atIndex:0];
     
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 280;
+
 }
 
 // Grabs movies using API url and generated key
@@ -120,10 +122,6 @@
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
     cell.movieTitle.text = self.movies[indexPath.row][@"title"];
     cell.movieDescr.text = self.movies[indexPath.row][@"overview"];
-    
-    // Formatting for labels
-    cell.movieTitle.numberOfLines = 0;
-    cell.movieDescr.numberOfLines = 0;
 
     // Get the movie at the specified index in the movies array
     NSDictionary *moviesDict = self.movies[indexPath.row];
